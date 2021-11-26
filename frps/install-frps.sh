@@ -13,8 +13,8 @@ str_program_dir="/usr/local/${program_name}"
 program_init="/etc/init.d/${program_name}"
 program_config_file="frps.ini"
 ver_file="/tmp/.frp_ver.sh"
-program_version_link="https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/version.sh"
-str_install_shell=https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/install-frps.sh
+program_version_link="https://raw.githubusercontent.com/zsjmark/onekey-install-shell/master/frps/version.sh"
+str_install_shell=https://raw.githubusercontent.com/zsjmark/onekey-install-shell/master/frps/install-frps.sh
 shell_update(){
     fun_clangcn "clear"
     echo "Check updates for shell..."
@@ -202,7 +202,10 @@ fun_getServer(){
             ;;
     esac
     echo "---------------------------------------"
-    echo "Your select: ${set_server_url}"
+     echo "Your select: ${set_server_url}"
+    echo "Fpr version: ${FRPS_VER}"
+    echo "Fpr File:    frp_${FRPS_VER}_linux_${ARCHS}.tar.gz"
+    echo "Fpr Download Addr: ${program_download_url}/v${FRPS_VER}/"   
     echo "---------------------------------------"
 }
 fun_getVer(){
